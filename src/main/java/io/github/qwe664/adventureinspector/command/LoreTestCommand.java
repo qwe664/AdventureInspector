@@ -23,7 +23,7 @@ public class LoreTestCommand implements CommandExecutor {
             return true;
         }
 
-        LoreTestGui.open(player);
+        LoreTestGui.open(player, plugin);
 
         return true;
     }
