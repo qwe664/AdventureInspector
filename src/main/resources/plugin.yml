@@ -1,0 +1,17 @@
+name: AdventureInspector
+version: '${version}'
+main: io.github.qwe664.adventureinspector.AdventureInspector
+api-version: '1.21'
+
+author: qwe664
+description: Adventure Component Debug Toolkit
+
+commands:
+  loretest:
+    description: Open the lore test GUI
+    usage: /loretest
+    permission: adventureinspector.command.loretest
+
+permissions:
+  adventureinspector.command.loretest:
+    default: op
