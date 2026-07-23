@@ -18,9 +18,6 @@ public final class LoreTestItems {
     private LoreTestItems() {
     }
 
-    /**
-     * 純 Adventure Component.text() Lore
-     */
     public static ItemStack plainTextItem(AdventureInspector plugin) {
         ItemStack item = new ItemStack(Material.STONE);
 
@@ -43,9 +40,6 @@ public final class LoreTestItems {
         return item;
     }
 
-    /**
-     * MiniMessage Lore
-     */
     public static ItemStack miniMessageItem(AdventureInspector plugin) {
         ItemStack item = new ItemStack(Material.EMERALD);
 
@@ -68,9 +62,6 @@ public final class LoreTestItems {
         return item;
     }
 
-    /**
-     * 測試特殊字串是否被解析
-     */
     public static ItemStack literalItem(AdventureInspector plugin) {
         ItemStack item = new ItemStack(Material.PAPER);
 
@@ -87,6 +78,30 @@ public final class LoreTestItems {
                 ItemKeys.testId(plugin),
                 PersistentDataType.STRING,
                 "literal"
+        );
+
+        item.setItemMeta(meta);
+        return item;
+    }
+
+    public static ItemStack bentoTestItem(AdventureInspector plugin) {
+        ItemStack item = new ItemStack(Material.HOPPER);
+
+        ItemMeta meta = item.getItemMeta();
+        meta.displayName(Component.text("Bento Test"));
+
+        meta.lore(List.of(
+                MINI_MESSAGE.deserialize("<green>Block Donation</green>"),
+                MINI_MESSAGE.deserialize("<gray>Toggle who can donate</gray>"),
+                MINI_MESSAGE.deserialize("<gray>blocks to raise island level.</gray>"),
+                MINI_MESSAGE.deserialize("<yellow>Left Click</yellow><gray> Down</gray>"),
+                MINI_MESSAGE.deserialize("<yellow>Right Click</yellow><gray> Up</gray>")
+        ));
+
+        meta.getPersistentDataContainer().set(
+                ItemKeys.testId(plugin),
+                PersistentDataType.STRING,
+                "bento_test"
         );
 
         item.setItemMeta(meta);
