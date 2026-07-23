@@ -28,6 +28,14 @@ tasks {
 
     processResources {
         filteringCharset = "UTF-8"
+
+        filesMatching("plugin.yml") {
+            expand(
+                mapOf(
+                    "version" to project.version
+                )
+            )
+        }
     }
 
     jar {
