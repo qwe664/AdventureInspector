@@ -3,7 +3,7 @@ plugins {
 }
 
 group = "io.github.qwe664"
-version = "0.1.0-MVP"
+version = "0.1.1-MVP"
 
 repositories {
     mavenCentral()
