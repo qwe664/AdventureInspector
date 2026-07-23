@@ -13,8 +13,9 @@ public class LoreTestGui {
     public static void open(Player player) {
         Inventory inventory = Bukkit.createInventory(null, 27, "AdventureInspector");
 
-        // 第一個測試物品
         inventory.setItem(10, LoreTestItems.plainTextItem());
+        inventory.setItem(12, LoreTestItems.miniMessageItem());
+        inventory.setItem(14, LoreTestItems.literalItem());
 
         player.openInventory(inventory);
     }
