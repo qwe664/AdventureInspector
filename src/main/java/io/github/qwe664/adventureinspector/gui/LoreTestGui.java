@@ -14,9 +14,10 @@ public final class LoreTestGui {
     public static void open(Player player, AdventureInspector plugin) {
         Inventory inventory = Bukkit.createInventory(null, 27, "AdventureInspector");
 
-        inventory.setItem(10, LoreTestItems.plainTextItem(plugin));
-        inventory.setItem(12, LoreTestItems.miniMessageItem(plugin));
-        inventory.setItem(14, LoreTestItems.literalItem(plugin));
+        inventory.setItem(9,  LoreTestItems.plainTextItem(plugin));
+        inventory.setItem(11, LoreTestItems.miniMessageItem(plugin));
+        inventory.setItem(13, LoreTestItems.literalItem(plugin));
+        inventory.setItem(15, LoreTestItems.bentoTestItem(plugin));
 
         player.openInventory(inventory);
     }
